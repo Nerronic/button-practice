@@ -1,7 +1,19 @@
 .App {
   text-align: center;
 }
+/* .background{
+  background-color: aqua;
+} */
+.logo{
+  border-radius:50%;
+  display: flex;
+  align-self: start;
+  
+}
 
+.Headshot{
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,6 +24,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+#button1 , #button2 {
+  display:inline-block;
+  /* additional code */
+  }
 
 .App-header {
   background-color: #282c34;
