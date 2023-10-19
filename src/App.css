@@ -1,13 +1,23 @@
 .App {
   text-align: center;
 }
-/* .background{
-  background-color: aqua;
-} */
+.container{
+  background-color: #ddebed; /* Dark background color */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 1000;
+  margin: auto;
+}
 .content {
 flex-direction: row;
 }
 
+.headshot{
+  background-color: #06d7fc; /* Dark background color */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 1000;
+  margin: auto;
+  
+}
 
 .particles{
   position:fixed;
@@ -17,6 +27,7 @@ flex-direction: row;
   left: 0;
   z-index:-1
 }
+
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,3 +59,24 @@ flex-direction: row;
     transform: rotate(360deg);
   }
 }
+
+.navbar a {
+  color: #000000; /* White text color */
+  text-decoration:gold;
+  font-weight: 500; /* Adjust font weight as needed */
+}
+
+.navbar a:hover {
+  background-color: #ece2e2; /* Slightly darker background on hover */
+  text-decoration: underline;
+}
+
+/* .navbar .dropdown-toggle:focus + .dropdown-menu {
+  display: none;
+} */
+.navbar {
+ transition: background-color 0.3s, text-decoration 0.3s;
+ transition: background-color 0.3s, text-decoration 0.3s;
+}
+
+

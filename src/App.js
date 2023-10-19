@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import Headshot from "./headshot/headshot.jpg";
 
-// import Navbar from './Components/navigation/navigation.js';
+
 import NavBar from "./Components/NavBar/Navbar";
 
 
@@ -23,6 +23,7 @@ function MyButton(){
 const user ={
  name: "Ty Carlton",
   imageSize:300,
+  
 }
 
 
@@ -48,6 +49,7 @@ export default function App() {
           width: user.imageSize,
           height: user.imageSize,
           borderRadius: '50%',
+          
         }}
       />
     <NavBar/>
