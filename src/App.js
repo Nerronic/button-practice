@@ -8,22 +8,17 @@ function MyButton(){
       <button> This works nicely</button>  
   )
 }
-
 //User
 const user ={
  name: "Ty Carlton",
   imageSize:200,
 }
-
-
-
 //Logo
 function MyLogo(){
   return(
     <img alt="Logo" className='logo' src={logo}/>
   )
 }
-
 //ABOUT PAGE
 function AboutPage(){
   return(
@@ -33,16 +28,9 @@ function AboutPage(){
     </>
   )
 }
-
 //LOGIN just leaving this here for my notes
 
-{/* <div>
-  {isLoggedIn ? (
-    <AdminPanel />
-  ) : (
-    <LoginForm />
-  )}
-</div> */}
+
 
 //renders the application
 export default function App() {
@@ -56,7 +44,6 @@ export default function App() {
 }}
 />
      <h1>Welcome to my Page</h1>
-
     <MyButton/>
     <AboutPage/>
     {/* <Headshot/> */}
