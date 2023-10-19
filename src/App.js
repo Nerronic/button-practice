@@ -1,7 +1,18 @@
-
+import ParticlesBg from "particles-bg"
+import React from 'react';
 import './App.css';
-import headshot from "./headshot/headshot.jpg";
-import logo from './logo/logo.png';
+import Headshot from "./headshot/headshot.jpg";
+
+// import Navbar from './Components/navigation/navigation.js';
+import NavBar from "./Components/NavBar/Navbar";
+
+
+
+
+
+
+// import Header from './Components/Header/Header';
+
 //BUTTON
 function MyButton(){
   return(
@@ -11,23 +22,13 @@ function MyButton(){
 //User
 const user ={
  name: "Ty Carlton",
-  imageSize:200,
+  imageSize:300,
 }
-//Logo
-function MyLogo(){
-  return(
-    <img alt="Logo" className='logo' src={logo}/>
-  )
-}
-//ABOUT PAGE
-function AboutPage(){
-  return(
-    <>
-    <h1>About</h1>
-    <p>Hello there.<br/ >How are you doing today? </p>
-    </>
-  )
-}
+
+
+
+
+
 //LOGIN just leaving this here for my notes
 
 
@@ -35,24 +36,30 @@ function AboutPage(){
 //renders the application
 export default function App() {
   return (
-    <div> 
-      <MyLogo />
-<h1>{user.name}</h1>
-<img className='avatar' src={headshot}alt={'Photo of ' + user.name} style={{
-  width: user.imageSize,
-  height:user.imageSize
-}}
-/>
-     <h1>Welcome to my Page</h1>
-    <MyButton/>
-    <AboutPage/>
-    {/* <Headshot/> */}
-    <p> Welcome to my new website. 
-      <div>I have been learning how to program for the past few months now
-      and I am excited to continue my journey.</div>
-    </p>
+    <div className="content">
+      
+      <ParticlesBg type="cobweb" color="purple" bg={true} />
+      <h1>{user.name}</h1>
+      <img
+        className="headshot"
+        src={Headshot}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize,
+          borderRadius: '50%',
+        }}
+      />
+    <NavBar/>
+      
+      
+      <MyButton />
+      <p>
+        Welcome to my new website.
+        <div>
+          I have been learning how to program for the past few months now and I am excited to continue my journey.
+        </div>
+      </p>
     </div>
-    
   )
-}
-
+      }
