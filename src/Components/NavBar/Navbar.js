@@ -1,47 +1,26 @@
-import { useState } from "react"; // Import useState from React
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Navbar from "react-bootstrap/Navbar";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function Navigation() {
-  const [expanded, setExpanded] = useState(false); // Create a state variable for expanded state
-
-  const handleNavbarToggle = () => {
-    setExpanded(!expanded);
-  };
   return (
-    <Navbar
-      expand="lg"
-      className="bg-body-tertiary"
-      fixed="top"
-      expanded={expanded}
-    >
+    <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
       <Container>
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
-        <br />
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={handleNavbarToggle}
-        />
+        <Navbar.Brand as={Link} to="/home">Home</Navbar.Brand> {/* Use Link */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Start here</Nav.Link>
-            <br />
-            <Nav.Link href="#link">See More </Nav.Link>
-
-            <NavDropdown title="See Less" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Videos</NavDropdown.Item>
-              <br />
-              <NavDropdown.Item href="#action/3.2">
-                Anything I want
-              </NavDropdown.Item>
-              <br />
-              <NavDropdown.Item href="#action/3.3">
-                Coming soon
-              </NavDropdown.Item>
+            <Nav.Link as={Link} to="/home">Start here</Nav.Link> {/* Use Link */}
+            <br/>
+            <Nav.Link as={Link} to="/aboutme">About Me</Nav.Link> {/* Add these */}
+            <NavDropdown title="See More" id="basic-nav-dropdown">
+           
+              <NavDropdown.Item as={Link} to="/videos">Videos</NavDropdown.Item> {/*           <NavDropdown.Item as={Link} to="/comingsoon">Coming Soon</NavDropdown.Item> {/* Add these */}
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Projects</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/projects">Projects</NavDropdown.Item> {/* Add these */}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -51,3 +30,4 @@ function Navigation() {
 }
 
 export default Navigation;
+
