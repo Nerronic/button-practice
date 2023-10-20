@@ -1,8 +1,10 @@
 import ParticlesBg from "particles-bg";
 import React from 'react';
+import Button from "react-bootstrap/Button";
 import './App.css';
 import NavBar from "./Components/NavBar/Navbar";
 import Headshot from "./headshot/headshot.jpg";
+
 
 // User
 const user = {
@@ -23,28 +25,31 @@ const userImage =(
 />
 )
 // BUTTON
-function MyButton() {
-  return (
-    <button>This works nicely</button>
-  );
-}
+
 
 // renders the application
 export default function App() {
   return (
-    <div className="content">
-      <ParticlesBg type="cobweb" color="purple" bg={true} />
-      <h1>{user.name}</h1>
-      {userImage}
+    <div>
       <NavBar />
-      <MyButton />
+      <ParticlesBg type="cobweb" color="purple" bg={true} />
+      <div className="image-container">
+      {userImage}
+      <div className="button">
+        
+        <Button variant="success">Say Hello here!</Button>{' '}
+      </div>
+      <div className="text-container">
+      <h1>{user.name}</h1>
       <p>
         Welcome to my new website.
         <div>
           I have been learning how to program for the past few months now, and I am excited to continue my journey.
         </div>
+        
       </p>
-     
+      </div>
+      </div>
     </div>
     
   );
