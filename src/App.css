@@ -17,6 +17,7 @@
   box-shadow: 20px 20px 40px rgba(1, 158, 220, 0.2);
   max-width: 800px; /* Adjust the max-width as needed */
   padding: 10px;
+  flex-direction: column;
 }
 
 .text-container {
@@ -45,7 +46,13 @@
   padding: 10px;
   display: flex;
   margin: auto;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
 
+}
+.image-container img {
+  margin-bottom: 10px; /* Add some space between the image and the button */
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
